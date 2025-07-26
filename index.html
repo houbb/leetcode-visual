@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>算法可视化资源索引</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      margin: 0;
+      padding: 40px;
+      background-color: #f5f7fa;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    #searchInput {
+      display: block;
+      margin: 0 auto 30px auto;
+      padding: 10px 15px;
+      width: 60%;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>算法可视化 · 资源导航</h1>
+  <input id="searchInput" type="text" placeholder="🔍 输入关键字搜索，如 binary、查找、排序...">
+
+  <div class="grid" id="cardGrid">
+    <!-- 示例卡片：binary-search-basic -->
+    <div class="card" data-tags="binary search 二分查找 可视化">
+      <div class="card-title">Binary Search 可视化</div>
+      <div class="card-desc">通过动画步骤演示二分查找过程，支持自定义输入和间隔时间。</div>
+      <a href="./binary-search-basic.html" target="_blank">打开页面</a>
+    </div>
+
+    <!-- 可继续添加更多算法可视化页面 -->
+    <!--
+    <div class="card" data-tags="bubble sort 排序 可视化">
+      <div class="card-title">Bubble Sort 可视化</div>
+      <div class="card-desc">冒泡排序过程演示，适合新手理解排序原理。</div>
+      <a href="./bubble-sort.html" target="_blank">打开页面</a>
+    </div>
+    -->
+  </div>
+
+  <footer>
+    © 2025 算法可视化项目 | 由你亲手打造 💡
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
+
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+      cards.forEach(card => {
+        const tags = card.getAttribute("data-tags").toLowerCase();
+        card.classList.toggle("hidden", !tags.includes(query));
+      });
+    });
+  </script>
+</body>
+</html>
