@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <title>算法可视化资源索引</title>
+  <title>算法可视化 · 资源导航</title>
   <style>
     body {
       font-family: "Helvetica Neue", sans-serif;
@@ -71,9 +71,66 @@
 
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px;
       font-size: 13px;
       color: #aaa;
+    }
+
+    /* 资料部分样式 */
+    .resources {
+      margin-top: 60px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .resources h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #2c3e50;
+    }
+
+    .resource-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .resource-box {
+      flex: 1 1 300px;
+    }
+
+    .resource-box ul {
+      list-style: none;
+      padding-left: 0;
+      line-height: 1.8;
+    }
+
+    .resource-box ul li a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .resource-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    .donate-img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 10px;
+      color: #333;
     }
   </style>
 </head>
@@ -82,25 +139,44 @@
   <input id="searchInput" type="text" placeholder="🔍 输入关键字搜索，如 binary、查找、排序...">
 
   <div class="grid" id="cardGrid">
-    <!-- 示例卡片：binary-search-basic -->
+    <!-- 示例卡片 -->
     <div class="card" data-tags="binary search 二分查找 可视化">
       <div class="card-title">Binary Search 可视化</div>
       <div class="card-desc">通过动画步骤演示二分查找过程，支持自定义输入和间隔时间。</div>
       <a href="./binary-search-basic.html" target="_blank">打开页面</a>
     </div>
+  </div>
 
-    <!-- 可继续添加更多算法可视化页面 -->
-    <!--
-    <div class="card" data-tags="bubble sort 排序 可视化">
-      <div class="card-title">Bubble Sort 可视化</div>
-      <div class="card-desc">冒泡排序过程演示，适合新手理解排序原理。</div>
-      <a href="./bubble-sort.html" target="_blank">打开页面</a>
+  <!-- 资料部分 -->
+  <div class="resources">
+    <h2>📚 相关资料</h2>
+    <div class="resource-group">
+
+      <div class="resource-box">
+        <div class="section-title">LeetCode 算法</div>
+        <ul>
+          <li><a href="https://houbb.github.io/" target="_blank">技术博客</a></li>
+          <li><a href="https://github.com/houbb/leetcode-visual" target="_blank">leetcode-visual · 可视化资源</a></li>
+          <li><a href="https://github.com/houbb/leetcode" target="_blank">leetcode 算法实现</a></li>
+        </ul>
+      </div>
+
+      <div class="resource-box">
+        <div class="section-title">吹牛交流群</div>
+        <img src="https://img-blog.csdnimg.cn/63926529df364f09bcb203a8a9016854.png" alt="wechat qr" />
+      </div>
+
+      <div class="resource-box">
+        <div class="section-title">支持开源</div>
+        <p>开源不易，如果本项目对你有帮助，你可以请老马喝一杯奶茶 ☕。</p>
+        <img class="donate-img" src="https://github.com/houbb/sensitive-word/raw/master/lmxxf_reword.png?raw=true" alt="打赏二维码" />
+      </div>
+
     </div>
-    -->
   </div>
 
   <footer>
-    © 2025 算法可视化项目 | 由你亲手打造 💡
+    © 2025 算法可视化项目 | 老马啸西风 💡
   </footer>
 
   <script>

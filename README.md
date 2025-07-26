@@ -6,7 +6,8 @@
 
 ## leetcode 算法
 
-> [leetcode-visual 资源可视化](https://github.com/houbb/leetcode-visual)
+> [技术博客](https://houbb.github.io/)
 
+> [leetcode-visual 资源可视化](https://github.com/houbb/leetcode-visual)
 
 > [leetcode 算法实现](https://github.com/houbb/leetcode)
